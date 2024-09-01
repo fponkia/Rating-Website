@@ -14,6 +14,12 @@ $attr .= ";port=11937";
 $attr .= ";dbname=defaultdb";
 $attr .= ";sslmode=verify-ca;sslrootcert='D:/absolute/path/to/ssl/certs/ca.pem'";
 
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
+
 try {
     $db = new PDO($attr, "avnadmin", "AVNS_adblRjpdBDLOf_-yb1D");
 
