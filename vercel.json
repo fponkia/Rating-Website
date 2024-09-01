@@ -5,9 +5,7 @@
     },
     "routes": [
       {
-        "src": "/api/homepage.php",
-        "headers": { "Location": "/homepage" },
-        "status": 307
+        "src": "/(.*)",  "dest": "/api/homepage.php"
       }
     ]
   }
