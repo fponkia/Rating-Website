@@ -5,8 +5,8 @@
     },
     "routes": [
       {
-        "src": "/api/homepahe.php",
-        "headers": { "Location": "/tutorial" },
+        "src": "/api/homepage.php",
+        "headers": { "Location": "/homepage" },
         "status": 307
       }
     ]
