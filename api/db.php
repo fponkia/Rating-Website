@@ -5,6 +5,9 @@
 // $fields = parse_url($uri);
 
 // build the DSN including SSL settings
+
+$db_user = "avnadmin";
+$db_pwd = "AVNS_adblRjpdBDLOf_-yb1D";
 $conn = "mysql:";
 $conn .= "host=mysql-c4bd69a-joke-rating-website.g.aivencloud.com";
 $conn .= ";port=11937";
