@@ -8,14 +8,14 @@
 
 $db_user = "avnadmin";
 $db_pwd = "AVNS_adblRjpdBDLOf_-yb1D";
-$conn = "mysql:";
-$conn .= "host=mysql-c4bd69a-joke-rating-website.g.aivencloud.com";
-$conn .= ";port=11937";
-$conn .= ";dbname=defaultdb";
-$conn .= ";sslmode=verify-ca;sslrootcert='D:/absolute/path/to/ssl/certs/ca.pem'";
+$attr = "mysql:";
+$attr .= "host=mysql-c4bd69a-joke-rating-website.g.aivencloud.com";
+$attr .= ";port=11937";
+$attr .= ";dbname=defaultdb";
+$attr .= ";sslmode=verify-ca;sslrootcert='D:/absolute/path/to/ssl/certs/ca.pem'";
 
 try {
-    $db = new PDO($conn, "avnadmin", "AVNS_adblRjpdBDLOf_-yb1D");
+    $db = new PDO($attr, "avnadmin", "AVNS_adblRjpdBDLOf_-yb1D");
 
     $stmt = $db->query("SELECT VERSION()");
     // print($stmt->fetch()[0]);
