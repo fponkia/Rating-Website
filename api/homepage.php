@@ -39,7 +39,7 @@ else{
     <body>
         <div id = "homehead">
             <section>
-                <img id = "headimage" src="images/Laugh.png" alt = "Laughing emoticon logo" ></img>
+                <img id = "headimage" src="Laugh.png" alt = "Laughing emoticon logo" ></img>
             <h1>Joke Rating Site Homepage</h1>
             </section>
 

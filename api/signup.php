@@ -177,7 +177,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         <div class = "signup">
             <aside>
-                <img src = "images/Laugh.png" alt = "Laughing emoticon logo"/>
+                <img src = "Laugh.png" alt = "Laughing emoticon logo"/>
             </aside>
 
             <section class = "form1">

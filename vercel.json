@@ -8,7 +8,10 @@
         "src": "/",  "dest": "/api/homepage.php"
       },
       {
-        "src": "/style.css", "dest": "/api/style.css"
+        "src": "style.css", "dest": "/api/style.css"
+      },
+      {
+        "src": "Laugh.png", "dest": "/api/Laugh.png"
       }
     ]
   }

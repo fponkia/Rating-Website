@@ -86,7 +86,7 @@ else{
     <body>
         <div id = "detailpagehead">
             <section>
-                <img id = "headimage" src="images/Laugh.png" alt = "Laughing emoticon logo" />
+                <img id = "headimage" src="Laugh.png" alt = "Laughing emoticon logo" />
                 <h1>Joke Detail Page</h1>
             </section>
 

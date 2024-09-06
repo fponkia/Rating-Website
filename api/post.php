@@ -98,7 +98,7 @@ else
 
         <div class = "postdiv">
             <aside>
-                <img src = "images/Laugh.png" alt = "Laughing emoticon"/>
+                <img src = "Laugh.png" alt = "Laughing emoticon"/>
             </aside>
             <section id = "post">
                 <form action = "" method = "post" id = "post_form">

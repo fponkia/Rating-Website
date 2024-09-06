@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h1 class = "header">Joke Rating Site Login Page</h1>
         <div class = "login">
             <aside>
-                <img src="images/Laugh.png" alt = "Laughing emoticon logo" />
+                <img src="Laugh.png" alt = "Laughing emoticon logo" />
             </aside>
 
             <section class = "form1">
