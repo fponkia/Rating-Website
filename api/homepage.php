@@ -31,7 +31,7 @@ else{
 <html lang = "en">
     <head>
         <title>Joke Rating Site Homepage</title>
-        <link rel = "stylesheet" type = "text/css" href="../public/css/style.css" />
+        <link rel = "stylesheet" type = "text/css" href="/public/css/style.css" />
 
         <meta charset="utf-8" name = "author" content = "Foram_Patel"></meta>
     </head>
@@ -39,7 +39,7 @@ else{
     <body>
         <div id = "homehead">
             <section>
-                <img id = "headimage" src="../public/images/Laugh.png" alt = "Laughing emoticon logo" ></img>
+                <img id = "headimage" src="/public/images/Laugh.png" alt = "Laughing emoticon logo" ></img>
             <h1>Joke Rating Site Homepage</h1>
             </section>
 
