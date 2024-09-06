@@ -167,7 +167,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang = "en">
     <head>
         <title>Sign-Up page</title>
-        <link rel = "stylesheet" type = "text/css" href = "css/style.css"/>
+        <link rel = "stylesheet" type = "text/css" href = "style.css"/>
 
         <meta charset="utf-8" name = "author" content = "Foram_Patel"></meta>
     </head>
@@ -247,7 +247,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <p>CS 215 * Assignments</p>
         </footer>
 
-        <script src  = "js/validation.js"></script>
-        <script src = "js/eventRegistrationSignUp.js"></script>
+        <script src  = "validation.js"></script>
+        <script src = "eventRegistrationSignUp.js"></script>
     </body>
 </html>

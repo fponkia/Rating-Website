@@ -31,7 +31,7 @@ else{
 <html lang = "en">
     <head>
         <title>Joke Rating Site Homepage</title>
-        <link rel = "stylesheet" type = "text/css" href="css/style.css" />
+        <link rel = "stylesheet" type = "text/css" href="style.css" />
 
         <meta charset="utf-8" name = "author" content = "Foram_Patel"></meta>
     </head>
@@ -121,5 +121,5 @@ foreach($result as $row){
             <p>CS 215 * Assignments</p>
         </footer>
     </body>
-    <script src = "js/validation.js"></script>
+    <script src = "validation.js"></script>
 </html>

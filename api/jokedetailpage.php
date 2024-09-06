@@ -79,7 +79,7 @@ else{
 <html lang = "en">
     <head>
         <title>Joke Detail Page</title>
-        <link rel = "stylesheet" type = "text/css" href="css/style.css"></link>
+        <link rel = "stylesheet" type = "text/css" href="style.css"></link>
         <meta charset="utf-8" name="author" content="Foram_Patel"/>
     </head>
 
@@ -169,7 +169,7 @@ catch(PDOException $e){
             <p>CS 215 * Assignments</p>
         </footer>
 
-        <script src="js/validation.js"></script>
-        <script src="js/eventRegistrationDetailPage.js"></script>
+        <script src="validation.js"></script>
+        <script src="eventRegistrationDetailPage.js"></script>
     </body>
 </html>
