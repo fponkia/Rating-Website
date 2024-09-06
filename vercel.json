@@ -4,7 +4,6 @@
     "api/*.php": { "runtime": "vercel-php@0.7.1" }
     },
     "routes": [
-        { "src": "/",  "dest": "/api/homepage.php" },
-        { "src": "/api/style.css", "dest": "/api/style.css" },
-        { "src": "/api/(.*)",  "dest": "/api/$1" }]        
+        { "src": "/api/(.*)",  "dest": "/api/$1" },
+        { "src": "/(.*)", "dest": "/index.html"}]        
 }
