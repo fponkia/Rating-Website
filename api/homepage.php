@@ -121,5 +121,5 @@ foreach($result as $row){
             <p>CS 215 * Assignments</p>
         </footer>
     </body>
-    <script src = "/api/js/validation.js"></script>
+    <script src = "/public/js/validation.js"></script>
 </html>

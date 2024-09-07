@@ -81,7 +81,7 @@ else
 
     <head>
         <title>Joke Posting Page</title>
-        <link rel = "stylesheet" type = "text/css" href = "style.css" />
+        <link rel = "stylesheet" type = "text/css" href = "/public/css/style.css" />
 
         <meta charset="utf-8" name = "author" content = "Foram_Patel"></meta>
     </head>
@@ -98,7 +98,7 @@ else
 
         <div class = "postdiv">
             <aside>
-                <img src = "Laugh.png" alt = "Laughing emoticon"/>
+                <img src = "/public/images/Laugh.png" alt = "Laughing emoticon"/>
             </aside>
             <section id = "post">
                 <form action = "" method = "post" id = "post_form">
@@ -127,7 +127,7 @@ else
             <p>CS 215 * Assignments</p>
         </footer>
 
-        <script src="validation.js"></script>
-        <script src="eventRegistrationPost.js"></script>
+        <script src="/api/js/validation.js"></script>
+        <script src="/api/js/eventRegistrationPost.js"></script>
     </body>
 </html>

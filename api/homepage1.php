@@ -41,7 +41,7 @@ else{
 <html lang = "en">
     <head>
         <title>Joke Rating Site Homepage</title>
-        <link rel = "stylesheet" type = "text/css" href="style.css" />
+        <link rel = "stylesheet" type = "text/css" href="/public/css/style.css" />
 
         <meta charset="utf-8" name = "author" content = "Foram_Patel" />
     </head>
@@ -49,7 +49,7 @@ else{
     <body>
         <div id = "homehead">
             <section>
-                <img id = "headimage" src="Laugh.png" alt = "Laughing emoticon logo"></img>
+                <img id = "headimage" src="/public/images/Laugh.png" alt = "Laughing emoticon logo"></img>
             <h1>Joke Rating Site Homepage</h1>
             </section>
 
@@ -139,5 +139,5 @@ foreach($result as $row){
         </footer>
     </body>
 
-    <script src = "validation.js"></script>
+    <script src = "/api/js/validation.js"></script>
 </html>

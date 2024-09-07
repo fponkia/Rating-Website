@@ -109,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <p name = "pass_error"></p>
                     </p>
 
-                    <p>If you do not have the account. Please click <a href="signup.php">here</a> for Sign-up.</p>
+                    <p>If you do not have the account. Please click <a href="/api/signup.php">here</a> for Sign-up.</p>
 
                     <button type = "submit"> Login</button>
                 </form>
@@ -120,7 +120,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>CS 215 * Assignments</p>
         </footer>
 
-        <script src="/api/js/validation.js"></script>
-        <script src = "/api/js/eventRegistrationLogin.js"></script>
+        <script src="/public/js/validation.js"></script>
+        <script src = "/public/js/eventRegistrationLogin.js"></script>
     </body>
 </html>

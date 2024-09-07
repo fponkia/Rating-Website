@@ -167,7 +167,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang = "en">
     <head>
         <title>Sign-Up page</title>
-        <link rel = "stylesheet" type = "text/css" href = "style.css"/>
+        <link rel = "stylesheet" type = "text/css" href = "/public/css/style.css"/>
 
         <meta charset="utf-8" name = "author" content = "Foram_Patel"></meta>
     </head>
@@ -177,7 +177,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         <div class = "signup">
             <aside>
-                <img src = "Laugh.png" alt = "Laughing emoticon logo"/>
+                <img src = "/public/images/Laugh.png" alt = "Laughing emoticon logo"/>
             </aside>
 
             <section class = "form1">
@@ -235,7 +235,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <button name = "sign" type ="submit" value = "Sign-Up_and_Proceed_to_Login_Page">Sign-Up and Proceed to Login Page</button>
                     </p>
 
-                    <p>Click <a name = "back" href = "homepage.php">here</a> to go back to homepage and cancel the sign-up.</p>
+                    <p>Click <a name = "back" href = "/api/homepage.php">here</a> to go back to homepage and cancel the sign-up.</p>
 
                 </form>
                 <p class = "bottom">This message cant be seen</p>
@@ -247,7 +247,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <p>CS 215 * Assignments</p>
         </footer>
 
-        <script src  = "validation.js"></script>
-        <script src = "eventRegistrationSignUp.js"></script>
+        <script src  = "/api/js/validation.js"></script>
+        <script src = "/api/js/eventRegistrationSignUp.js"></script>
     </body>
 </html>
