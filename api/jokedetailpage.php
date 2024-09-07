@@ -169,7 +169,7 @@ catch(PDOException $e){
             <p>CS 215 * Assignments</p>
         </footer>
 
-        <script src="/api/js/validation.js"></script>
-        <script src="/api/js/eventRegistrationDetailPage.js"></script>
+        <script src="/public/js/validation.js"></script>
+        <script src="/public/js/eventRegistrationDetailPage.js"></script>
     </body>
 </html>

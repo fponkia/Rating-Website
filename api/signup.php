@@ -247,7 +247,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <p>CS 215 * Assignments</p>
         </footer>
 
-        <script src  = "/api/js/validation.js"></script>
-        <script src = "/api/js/eventRegistrationSignUp.js"></script>
+        <script src  = "/public/js/validation.js"></script>
+        <script src = "/public/js/eventRegistrationSignUp.js"></script>
     </body>
 </html>
