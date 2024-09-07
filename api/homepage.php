@@ -31,7 +31,7 @@ else{
 <html lang = "en">
     <head>
         <title>Joke Rating Site Homepage</title>
-        <link rel = "stylesheet" type = "text/css" href="/public/css/style.css" />
+        <link rel = "stylesheet" type = "text/css" href="../api/style.css" />
 
         <meta charset="utf-8" name = "author" content = "Foram_Patel"></meta>
     </head>
