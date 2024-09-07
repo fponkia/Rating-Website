@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang = "en">
     <head>
         <title>Login Page</title>
-        <link rel = "stylesheet" type = "text/css" href = "style.css" />
+        <link rel = "stylesheet" type = "text/css" href = "/public/css/style.css" />
 
         <meta charset="utf-8" name = "author" content = "Foram_Patel"></meta>
 
@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h1 class = "header">Joke Rating Site Login Page</h1>
         <div class = "login">
             <aside>
-                <img src="Laugh.png" alt = "Laughing emoticon logo" />
+                <img src="/public/images/Laugh.png" alt = "Laughing emoticon logo" />
             </aside>
 
             <section class = "form1">
@@ -120,7 +120,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>CS 215 * Assignments</p>
         </footer>
 
-        <script src="validation.js"></script>
-        <script src = "eventRegistrationLogin.js"></script>
+        <script src="/api/validation.js"></script>
+        <script src = "/api/eventRegistrationLogin.js"></script>
     </body>
 </html>
