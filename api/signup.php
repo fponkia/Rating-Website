@@ -80,7 +80,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $result = $db->exec($query);
 
                 if($result){
-                    $target_dir = "uploads/";
+                    $target_dir = "/public/uploads/";
                     $uploadOk = TRUE;
 
                     $imageFileType = strtolower(pathinfo($_FILES["avatar"]["name"],PATHINFO_EXTENSION));
