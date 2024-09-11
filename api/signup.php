@@ -93,8 +93,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                              
                              // Bind parameters
                              $stmt->bindParam(':username', $username);
-                             $stmt->bindParam(':first_name', $first_name);
-                             $stmt->bindParam(':last_name', $last_name);
+                             $stmt->bindParam(':first_name', $firstName);
+                             $stmt->bindParam(':last_name', $lastName);
                              $stmt->bindParam(':email', $email);
                              $stmt->bindParam(':dob', $dob);
                              $stmt->bindParam(':password', $password);
