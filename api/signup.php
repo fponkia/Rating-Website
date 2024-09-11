@@ -83,12 +83,83 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     // Read the image file as binary data
                     $imageData = file_get_contents($imageTmpName);
                     
-                    $query = "INSERT INTO Users_Info(username, first_name, last_name, email, dob, password, avatar)
-                                 VALUES('$username', '$firstName', '$lastName', '$email', '$dob', '$password', '$imageData')";
+                    // $query = "INSERT INTO Users_Info(username, first_name, last_name, email, dob, password, avatar)
+                                //  VALUES('$username', '$firstName', '$lastName', '$email', '$dob', '$password', '$imageData')";
+                                 
+                                 $stmt = $pdo->prepare("
+                                 INSERT INTO Users (username, first_name, last_name, email, dob, password, avatar) 
+                                 VALUES (:username, :first_name, :last_name, :email, :dob, :password, :avatar)
+                             ");
+                             
+                             // Bind parameters
+                             $stmt->bindParam(':username', $username);
+                             $stmt->bindParam(':first_name', $first_name);
+                             $stmt->bindParam(':last_name', $last_name);
+                             $stmt->bindParam(':email', $email);
+                             $stmt->bindParam(':dob', $dob);
+                             $stmt->bindParam(':password', $password);
+                             $stmt->bindParam(':avatar', $imageData, PDO::PARAM_LOB); // Bind the image as a LOB
+                 
 
-                     $result = $db->exec($query);
+                     $result = $db->exec($stmt);
                 }
-                
+
+                // if($result){
+                //     $target_dir = "/public/uploads/";
+                //     $uploadOk = TRUE;
+
+                //     $imageFileType = strtolower(pathinfo($_FILES["avatar"]["name"],PATHINFO_EXTENSION));
+
+                //     $uid = $db -> lastInsertId();
+
+                //     $target_file = $target_dir.$uid.".".$imageFileType;
+
+                //     if(file_exists($target_file)){
+                //         $errors["avatar"] = "File already exists.";
+                //         $uploadOk = FALSE;
+                //     }
+
+                //     if($_FILES["profilephoto"]["size"] > 1000000){
+                //         $errors["avatar"] = "File size is greater than 1MB.";
+                //         $uploadOk = FALSE;
+                //     }
+
+                //     if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif"){
+                //         $errors["avatar"] = "File type is not jpg, jpeg, png, or gif.";
+                //         $uploadOk = FALSE;
+                //     }
+
+                //     if($uploadOk){
+                //         $fileStatus = move_uploaded_file($_FILES["avatar"]["tmp_name"], $target_file);
+        
+                //         if(!($fileStatus)){
+                //             $errors["Server Error"] = "File was not moved to destination. There was an error while uploading.";
+
+                //             $query = "DELETE FROM Users_Info WHERE user_id = '$uid'";
+                //             $result = $db ->exec($query);
+                //             if (!$result) {
+                //                 $errors["Database Error"] = "could not delete user when avatar upload failed";
+                //             }
+
+                //             $db = null;
+                //         }
+                //         else{
+                //             $query =  "UPDATE Users_Info SET avatar = '$target_file'
+                //                        WHERE user_id = '$uid'";
+                //             $result = $db -> exec($query);
+                //             if (!$result) {
+                //                 $errors["Database Error:"] = "could not update avatar_url";
+                //             } else {
+                //                 $db = null;
+                //                 $query = null;
+                //                 $result = null;
+                //                 header("Location:login.php");
+                //                 exit();
+                //             }
+                //         }
+                //     }
+                    
+                // }
                 else{
                     $errors["Database Error:"] = "Failed to insert user";
                 }
