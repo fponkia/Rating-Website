@@ -86,7 +86,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     // $query = "INSERT INTO Users_Info(username, first_name, last_name, email, dob, password, avatar)
                                 //  VALUES('$username', '$firstName', '$lastName', '$email', '$dob', '$password', '$imageData')";
                                  
-                                 $stmt = $pdo->prepare("
+                                 $stmt = $db->prepare("
                                  INSERT INTO Users (username, first_name, last_name, email, dob, password, avatar) 
                                  VALUES (:username, :first_name, :last_name, :email, :dob, :password, :avatar)
                              ");
