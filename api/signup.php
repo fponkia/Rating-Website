@@ -101,7 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                              $stmt->bindParam(':avatar', $imageData, PDO::PARAM_LOB); // Bind the image as a LOB
                  
 
-                     $result = $db->exec($stmt);
+                     $result = $stmt -> execute();
                 }
 
                 // if($result){
