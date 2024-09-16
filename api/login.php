@@ -56,8 +56,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $query = null;
                 $result = null;
 
-                echo "I am Here";
-
                 header("Location:homepage1.php");
                 exit();
 
