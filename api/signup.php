@@ -87,7 +87,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                 //  VALUES('$username', '$firstName', '$lastName', '$email', '$dob', '$password', '$imageData')";
                                  
                                  $stmt = $db->prepare("
-                                 INSERT INTO Users (username, first_name, last_name, email, dob, password, avatar) 
+                                 INSERT INTO Users_Info (username, first_name, last_name, email, dob, password, avatar) 
                                  VALUES (:username, :first_name, :last_name, :email, :dob, :password, :avatar)
                              ");
                              
@@ -102,6 +102,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                  
 
                      $result = $stmt -> execute();
+
+                     if (!$result) {
+                            $errors["Database Error:"] = "could not update avatar_url";
+                    } else {
+                        $db = null;
+                        $query = null;
+                        $result = null;
+                        header("Location:login.php");
+                        exit();
+                    }
                 }
 
                 // if($result){
