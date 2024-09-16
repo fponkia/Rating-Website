@@ -42,8 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $errors["Database Error"] = "Could not retrieve user information";
             } elseif ($row = $result->fetch()) {
 
-                echo "I am Here";
-
                 session_start();
 
                 $_SESSION["user_id"] = $row["user_id"];
@@ -58,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $query = null;
                 $result = null;
 
-                header("Location: homepage1.php");
+                header("Location:homepage1.php");
                 exit();
 
             }
