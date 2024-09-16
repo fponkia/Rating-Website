@@ -42,6 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $errors["Database Error"] = "Could not retrieve user information";
             } elseif ($row = $result->fetch()) {
 
+                echo "I am Here";
+
                 session_start();
 
                 $_SESSION["user_id"] = $row["user_id"];
