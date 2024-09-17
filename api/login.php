@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $query = null;
                 $result = null;
 
-                header("Location:homepage1.php");
+                header("Location:./homepage1.php");
                 exit();
 
             }
