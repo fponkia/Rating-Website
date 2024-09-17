@@ -52,8 +52,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["avatar"] = $row["avatar"];
                 $_SESSION["dob"] = $row["dob"];
 
-                if(!isset($_SESSION["avatar"])){
-                    echo "<p>Not set</p>";
+                if(isset($_SESSION["avatar"])){
+                    // echo "<p>Not set</p>";
+                    header("Location:homepage1.php");
+                    exit();
                 }
 
                 $db = null;
