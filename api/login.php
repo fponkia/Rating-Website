@@ -52,6 +52,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["avatar"] = $row["avatar"];
                 $_SESSION["dob"] = $row["dob"];
 
+                if(!isset($_SESSION["avatar"])){
+                    echo "<p>Not set</p>";
+                }
+
                 $db = null;
                 $query = null;
                 $result = null;
@@ -95,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <section class = "form1">
                 <form id = "login_form" action = "" method="post">
-                    <p class = "info">To login you need to provide the username and password.</p>
+                    <p class = "info">To login you need to provide the email and password.</p>
                     <p class = "info"><strong> Required fields are marked with (*).</strong></p>
                     
                     <p>
