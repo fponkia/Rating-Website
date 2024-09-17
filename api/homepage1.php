@@ -3,6 +3,7 @@
 session_start();
 
 if(!isset($_SESSION["user_id"])){
+    echo "<p>Session not working</p>";
     // header("Location: login.php");
     // exit();
 }
