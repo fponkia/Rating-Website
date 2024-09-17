@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $errors["Login Failed"] = "That username/password combination does not exist.";
             }
 
-            header("Location:homepage1.php");
+            header("Location:/api/homepage1.php");
             exit();
         }
         catch(PDOException $e){
