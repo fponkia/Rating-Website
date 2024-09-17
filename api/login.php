@@ -58,9 +58,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 
                 if(isset($_SESSION["user_id"])){
-                    echo "<p>Not set</p>";
-                    // header("Location:homepage1.php");
-                    // exit();
+                    header("Location:homepage1.php");
+                    exit();
                 }
             }
             else{
