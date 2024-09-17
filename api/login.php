@@ -52,18 +52,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["avatar"] = $row["avatar"];
                 $_SESSION["dob"] = $row["dob"];
 
-                if(isset($_SESSION["avatar"])){
-                    // echo "<p>Not set</p>";
-                    header("Location:homepage1.php");
-                    exit();
-                }
-
                 $db = null;
                 $query = null;
                 $result = null;
 
-                header("Location:/api/homepage1.php");
-                exit();
+                
+                if(!isset($_SESSION["user_id"])){
+                    echo "<p>Not set</p>";
+                    // header("Location:homepage1.php");
+                    // exit();
+                }
             }
             else{
                 $errors["Login Failed"] = "That username/password combination does not exist.";
