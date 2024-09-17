@@ -56,13 +56,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $query = null;
                 $result = null;
 
+                header("Location:/api/homepage1.php");
+                exit();
             }
             else{
                 $errors["Login Failed"] = "That username/password combination does not exist.";
             }
 
-            header("Location:/api/homepage1.php");
-            exit();
+            
         }
         catch(PDOException $e){
             throw new Exception($e -> getMessage(), (int)$e->getCode());
@@ -111,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <p>If you do not have the account. Please click <a href="/api/signup.php">here</a> for Sign-up.</p>
 
-                    <button type = "submit"> Login</button>
+                    <p><button type = "submit"> Login</button></p>
                 </form>
             </section>
         </div>
