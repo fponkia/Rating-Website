@@ -5,11 +5,33 @@ session_start();
 require_once("db.php");
 
 $errors = array();
-if(!isset($_SESSION["user_id"])){
+// if(!isset($_SESSION["user_id"])){
+//     header("Location: login.php");
+//     exit();
+// }
+if(!isset($_COOKIE["user_id"])){
     header("Location: login.php");
     exit();
 }
 else{
+    try{
+        $db = new PDO($attr, $db_user, $db_pwd, $options);
+        $query = "SELECT * FROM Users_Info WHERE user_id = '$_COOKIE["user_id"]'";
+
+        $result = $db -> query($query);
+
+        $_SESSION["user_id"] = $row["user_id"];
+        $_SESSION["first_name"] = $row["first_name"];
+        $_SESSION["last_name"] = $row["last_name"];
+        $_SESSION["email"] = $row["email"];
+        $_SESSION["username"] = $row["username"];
+        $_SESSION["avatar"] = $row["avatar"];
+        $_SESSION["dob"] = $row["dob"];
+
+    }catch(PDOException $e){
+        throw new Exception($e -> getMessage(), (int)$e -> getCode());
+    }
+    
     try{
         $rate = 0;
         $uid = $_SESSION["user_id"];

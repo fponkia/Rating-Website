@@ -23,6 +23,18 @@ $errors = array();
 try{
     $db = new PDO($attr, $db_user, $db_pwd, $options);
 
+    $query = "SELECT * FROM Users_Info WHERE user_id = '$_COOKIE["user_id"]'";
+
+    $result = $db -> query($query);
+
+    $_SESSION["user_id"] = $row["user_id"];
+    $_SESSION["first_name"] = $row["first_name"];
+    $_SESSION["last_name"] = $row["last_name"];
+    $_SESSION["email"] = $row["email"];
+    $_SESSION["username"] = $row["username"];
+    $_SESSION["avatar"] = $row["avatar"];
+    $_SESSION["dob"] = $row["dob"];
+
     $query = "SELECT Joke_Posts.joke_id, Joke_Posts.title, Joke_Posts.text, Joke_Posts.dateTime, Users_Info.username, Users_Info.avatar, AVG(User_Ratings.rating)AS Average_Rating FROM Joke_Posts
               LEFT JOIN User_Ratings ON (Joke_Posts.joke_id = User_Ratings.joke_id)
               LEFT JOIN Users_Info ON(Joke_Posts.user_id = Users_Info.user_id)
