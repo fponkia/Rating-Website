@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $query = null;
                 $result = null;
 
-                $_COOKIE("user_id", $row["user_id"], time() + 7200, "/");
+                setcookie("user_id", $row["user_id"], time() + 7200, "/");
                 header("Location: homepage1.php");
                 exit();
 
