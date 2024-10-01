@@ -2,12 +2,16 @@
 
 session_start();
 
-if(!isset($_SESSION["user_id"])){
-    echo "<p>Session not working</p>";
-    // header("Location: login.php");
-    // exit();
+// if(!isset($_SESSION["user_id"])){
+//     echo "<p>Session not working</p>";
+//     // header("Location: login.php");
+//     // exit();
+// }
+if(!isset($_COOKIE["user_id"])){
+    header("Location: login.php");
+    exit();
 }
-else{
+else {
 
 require_once("db.php");
 

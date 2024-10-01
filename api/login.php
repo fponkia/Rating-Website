@@ -56,11 +56,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $query = null;
                 $result = null;
 
+                $_COOKIE("user_id", $row["user_id"], time() + 7200, "/");
+                header("Location: homepage1.php");
+                exit();
+
                 
-                if(isset($_SESSION["user_id"])){
-                    header("Location:homepage1.php");
-                    exit();
-                }
+                // if(isset($_SESSION["user_id"])){
+                //     header("Location:homepage1.php");
+                //     exit();
+                // }
             }
             else{
                 $errors["Login Failed"] = "That username/password combination does not exist.";
